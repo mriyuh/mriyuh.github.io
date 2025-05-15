@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Production</title>
+  <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+      }
+      .item {
+        width: 320px;
+        text-align: center;
+      }
+      .item img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      .item a {
+        display: block;
+        margin-top: 8px;
+        text-decoration: none;
+        color: #0066cc;
+        font-weight: bold;
+      }
+      .item a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+  
+    <script>
+      fetch('/header.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('header-placeholder').innerHTML = html;
+        });
+    </script>
+  
+    <main>
+      <section class="gallery">
+        <div class="item">
+          <img src="/images/video1thumbnail.jpg" alt="Video 1 Thumbnail">
+          <a href="https://www.youtube.com/watch?v=uKL2Gxvx9bI&t=624s" target="_blank">video1</a>
+        </div>
+        <div class="item">
+          <img src="/images/video2thumbnail.jpg" alt="Video 2 Thumbnail">
+          <a href="https://www.youtube.com/watch?v=uKL2Gxvx9bI&t=624s" target="_blank">video2</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+  
