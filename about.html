@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .section h2 {
+      color: #333;
+    }
+    .section p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+      });
+  </script>
+
+  <main class="content">
+    <section class="section">
+      <h2>Our Story</h2>
+      <p>Add a short paragraph here explaining how and why Mriyuh Studio was started. You can talk about your mission, vision, or what makes your content unique.</p>
+      <img src="/images/our-story.jpg" alt="Our Story Image">
+    </section>
+
+    <section class="section">
+      <h2>Behind the Scenes</h2>
+      <p>Share what goes into producing your videos — from planning and filming to editing and publishing. Feel free to describe your creative process or team setup.</p>
+      <img src="/images/behind-the-scenes.jpg" alt="Behind the Scenes Image">
+    </section>
+
+    <section class="section">
+      <h2>Our Values</h2>
+      <p>Highlight the core values or principles that guide your content creation — such as authenticity, humor, education, storytelling, etc.</p>
+      <img src="/images/values.jpg" alt="Our Values Image">
+    </section>
+  </main>
+</body>
+</html>
