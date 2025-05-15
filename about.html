@@ -62,5 +62,13 @@
       <img src="/images/values.jpg" alt="Our Values Image">
     </section>
   </main>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
 </body>
 </html>
