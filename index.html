@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mriyuh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mriyuh Studio</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      text-align: center;
+      background-color: #f9f9f9;
     }
-
-    img.signature {
-      width: 160px;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
+    .section {
+      margin-bottom: 40px;
     }
-
-    p {
-      max-width: 400px;
-      margin-bottom: 2rem;
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
-
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1a1a1a;
-      font-weight: bold;
+    .section h2 {
+      color: #333;
     }
-
-    .socials a:hover {
-      color: #0073e6;
+    .section p {
+      color: #555;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <!-- Signature Image 1 -->
-  <img src="images/mriyuh-profile.png" alt="Mriyuh's Profile" class="signature" />
-  <h1>
-    Mriyuh
-  </h1>
-  <p>🎥 Fast-paced travel, challenge, and collectible vlog content.<br>
-     Join my adventures with the links below!</p>
-  
-  <div class="socials">
-    <a href="https://youtube.com/@mriyuh" target="_blank">YouTube</a>
-    <a href="https://instagram.com/mriyuhs" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@mriyuhs" target="_blank">TikTok</a>
-  </div>
+  <div id="header-placeholder"></div>
 
-  <!-- Signature Image 2 -->
-  <img src="images/mriyuh-w-chumster.png" alt="Mriyuh and Chumster" class="signature" />
-  
+  <script>
+    fetch('/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+      });
+  </script>
+
+  <main class="content">
+    <section class="section">
+      <h2>Welcome to Mriyuh Studio</h2>
+      <p>Explore travel, challenge, and toy-collecting adventures through fast-paced, story-driven videos. Join our journey as we share real moments and curious creations.</p>
+      <img src="/images/welcome.jpg" alt="Welcome Image">
+    </section>
+
+    <section class="section">
+      <h2>What We Create</h2>
+      <p>From wild fishing trips to intense games with punishments, we craft high-energy content with a personal twist. Mriyuh Studio is about experience, expression, and experimentation.</p>
+      <img src="/images/what-we-create.jpg" alt="Creative Process Image">
+    </section>
+  </main>
 </body>
 </html>
