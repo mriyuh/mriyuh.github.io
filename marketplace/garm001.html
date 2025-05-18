@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Organic Tee | Mriyuh Studio</title>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/shared.css">
+  <link rel="stylesheet" href="/assets/css/product.css">
+</head>
+<body>
+
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+
+  <main class="product-container">
+    <div class="product-gallery">
+      <img id="main-image" src="/images/products/garm001.jpg" alt="Front view of First Studio T-Shirt" class="product-main-img">
+      <div class="product-thumbnails">
+        <img src="/images/products/garm001.jpg" alt="Front view" class="thumb active" onclick="changeImage(this)">
+        <img src="/images/products/garm001_alt1.jpg" alt="Back view" class="thumb" onclick="changeImage(this)">
+        <img src="/images/products/garm001_alt2.jpg" alt="Detail view" class="thumb" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>First Studio T-Shirt</h1>
+      <p class="product-price">$70</p>
+      <p class="product-description">
+        This is Mriyuh Studio's first ever clothing product. Crafted from 100% organic cotton, sourced sustainably from Texas Family Cotton Farm and milled in North Carolina. Leather sourced from Horween Tannery, Chicago. Cut and sewn by Mriyuh herself — with care and intention. Each piece is numbered and limited.
+      </p>
+      <button class="order-btn" disabled>Order Now</button>
+    </div>
+  </main>
+
+  <!-- Additional Sections -->
+  <section class="product-extras" style="max-width: 1000px; margin: auto; padding: 2rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <a href="/marketplace/store.html" class="button-link">← Back to Marketplace</a>
+    </div>
+
+    <div class="product-story" style="margin-bottom: 3rem;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem;">Product Story</h2>
+      <p style="margin-bottom: 1.5rem;">
+        This tee represents the beginning of Mriyuh Studio’s fashion journey — a celebration of material honesty, slow design, and hands-on craftsmanship. It was imagined not in a corporate office, but at a humble workbench, where fabric and leather met story and soul.
+      </p>
+      <a href="https://youtube.com/yourvideo" target="_blank">
+        <img src="/images/products/garm001_story.jpg" alt="Watch the Making Of" style="max-width: 400px; width: 100%; border-radius: 6px;">
+      </a>
+    </div>
+
+    <div class="product-care">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem;">Care Instructions</h2>
+      <ul style="line-height: 1.8; padding-left: 1.5rem;">
+        <li>Machine wash cold with like colors.</li>
+        <li>Use mild detergent. Avoid bleach.</li>
+        <li>Do not tumble dry — hang dry for best results.</li>
+        <li>Iron inside-out on low if needed.</li>
+        <li><strong>Note:</strong> Remove the leather tag before washing or drying. It is not machine-safe.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Includes -->
+  <script src="/assets/js/includes.js"></script>
+  <script>
+    function changeImage(thumb) {
+      const main = document.getElementById('main-image');
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      main.src = thumb.src;
+    }
+  </script>
+
+</body>
+</html>
