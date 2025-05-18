@@ -164,3 +164,108 @@ main {
   color: #444;
 }
 
+/* ===== HOME BANNER ===== */
+.banner-section {
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.banner-text {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== INTRO SPLIT SECTION ===== */
+.home-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.intro-split {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.drop-counter-box {
+  flex: 1;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.drop-counter-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.drop-description {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.drop-note {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.intro-text-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.intro-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.intro-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.intro-overlay h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.intro-overlay p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #111;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #333;
+}
+
