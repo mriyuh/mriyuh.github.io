@@ -4,65 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mriyuh Studio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .section h2 {
-      color: #333;
-    }
-    .section p {
-      color: #555;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <div id="header-placeholder"></div>
-  <script>
-    fetch('/header.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-      });
-  </script>
 
-  <main class="content">
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+
+  <!-- Banner Section -->
+  <section class="banner-section">
+    <div class="banner-text">
+      🧵 New Drop: Artisan Tee Collection — Limited Pieces Available Now
+    </div>
+  </section>
+
+  <!-- Drop + About Split Section -->
+  <main class="home-container">
+
+    <section class="intro-split">
+      <!-- Drop Counter -->
+      <div class="drop-counter-box">
+        <h2>Current Drop</h2>
+        <p class="drop-description">Only <span id="drop-count">23</span> pieces remaining</p>
+        <small class="drop-note">Updated in real time</small>
+      </div>
+
+      <!-- Brand Intro -->
+      <div class="intro-text-image">
+        <img src="/images/home-about.jpg" alt="Studio Preview" class="intro-img">
+        <div class="intro-overlay">
+          <h2>Mriyuh Studio</h2>
+          <p>Where timeless values are woven into modern design. Discover the story behind our craftsmanship.</p>
+          <a href="/about.html" class="button-link">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Existing Content: Welcome -->
     <section class="section">
       <h2>Welcome to Mriyuh Studio</h2>
       <p>Explore travel, challenge, and toy-collecting adventures through fast-paced, story-driven videos. Join our journey as we share real moments and curious creations.</p>
       <img src="/images/welcome.jpg" alt="Welcome Image">
     </section>
 
+    <!-- Existing Content: What We Create -->
     <section class="section">
       <h2>What We Create</h2>
       <p>From wild fishing trips to intense games with punishments, we craft high-energy content with a personal twist. Mriyuh Studio is about experience, expression, and experimentation.</p>
       <img src="/images/what-we-create.jpg" alt="Creative Process Image">
     </section>
+
   </main>
 
+  <!-- Footer Include -->
   <div id="footer-placeholder"></div>
+
+  <!-- Includes Loader -->
+  <script src="/assets/js/includes.js"></script>
+
+  <!-- Mock Dynamic Counter -->
   <script>
-    fetch('/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-      });
+    let remaining = 23;
+    setInterval(() => {
+      if (remaining > 0) {
+        remaining--;
+        document.getElementById('drop-count').textContent = remaining;
+      }
+    }, 15000); // adjust as needed (15 sec per drop for demo)
   </script>
+
 </body>
 </html>
