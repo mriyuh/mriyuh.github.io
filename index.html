@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mriyuh Studio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -11,9 +16,8 @@
   <!-- Header Include -->
   <div id="header-placeholder"></div>
 
- <!-- Banner Section -->
+  <!-- Banner Section -->
   <section class="banner-section">
-   <section class="banner-section">
     <a href="/about.html" class="banner-text">
       <span class="inline-flag"><img src="/assets/icons/gb.svg" alt="UK Flag"></span>
       British craftsmanship with 100% natural materials, sourced from local American farms and mills
@@ -21,10 +25,8 @@
     </a>
   </section>
 
-
   <!-- Drop + About Split Section -->
   <main class="home-container">
-
     <section class="intro-split">
       <!-- Drop Counter -->
       <div class="drop-counter-box">
@@ -43,24 +45,23 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer Include -->
   <div id="footer-placeholder"></div>
 
-  <!-- Includes Loader -->
+  <!-- JS Includes -->
   <script src="/assets/js/includes.js"></script>
 
   <!-- Mock Dynamic Counter -->
   <script>
-    let remaining = 23;
+    let remaining = 100;
     setInterval(() => {
       if (remaining > 0) {
         remaining--;
         document.getElementById('drop-count').textContent = remaining;
       }
-    }, 15000); // adjust as needed (15 sec per drop for demo)
+    }, 15000);
   </script>
 
 </body>
