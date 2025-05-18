@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Return Policy | Mriyuh Studio</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+
+  <main class="terms-container">
+    <h1>Return Policy</h1>
+    <p><strong>Effective Date:</strong> 18th May, 2025</p>
+
+    <h2>Returns & Eligibility</h2>
+    <p>We want you to feel confident and satisfied with your purchase. If you're not fully happy with your order, you may return it within <strong>30 days</strong> of the delivery date.</p>
+
+    <h2>Conditions for a Full Refund</h2>
+    <p>To be eligible for a full refund, returned items must meet all of the following conditions:</p>
+    <ul>
+      <li>The package is unopened <em>or</em> the garment is unworn</li>
+      <li>All original tags, packaging, and components are included</li>
+      <li>The item is in resellable condition (free of wear, damage, or marks)</li>
+    </ul>
+
+    <h2>Return Shipping</h2>
+    <p>Customers are responsible for covering the cost of return shipping <strong>unless</strong> the item was received in a damaged condition. We recommend using a tracked service to ensure your return arrives safely.</p>
+
+    <h2>Inspection & Refunds</h2>
+    <p>Once your return is received, we will inspect the product to confirm its condition. If the return meets our criteria, a refund will be issued to your original payment method. Please allow up to 5–10 business days for processing after inspection.</p>
+
+    <h2>Start a Return</h2>
+    <p>To begin a return, please email us at <a href="mailto:info.mriyuh@gmail.com">info.mriyuh@gmail.com</a> with your order number and reason for return. We’ll respond within 2 business days with next steps.</p>
+
+    <h2>Contact Us</h2>
+    <p>For any questions about your return or eligibility, please email us at:</p>
+    <p>📧 <a href="mailto:info.mriyuh@gmail.com">info.mriyuh@gmail.com</a></p>
+  </main>
+
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Includes -->
+  <script src="/assets/js/includes.js"></script>
+
+</body>
+</html>
