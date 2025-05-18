@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .section h2 {
-      color: #333;
-    }
-    .section p {
-      color: #555;
-      line-height: 1.6;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Mriyuh Studio</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+
   <div id="header-placeholder"></div>
 
-  <script>
-    fetch('/header.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-      });
-  </script>
+  <main class="about-container">
 
-  <main class="content">
-    <section class="section">
-      <h2>Our Story</h2>
-      <p>Add a short paragraph here explaining how and why Mriyuh Studio was started. You can talk about your mission, vision, or what makes your content unique.</p>
-      <img src="/images/our-story.jpg" alt="Our Story Image">
+    <!-- Our Story -->
+    <section class="about-section split-row">
+      <div class="text-side">
+        <h2>Our Story</h2>
+        <p>Mriyuh Studio was founded by Mriyuh — an artist, a designer, and a dreamer with a sewing machine.</p>
+        <p>Rooted in the heritage of Britain’s traditional mill industry and shaped by the quiet strength of Eastern ethics, she believes the union of these two worlds forms the foundation of her studio: precision and play, discipline and daring.</p>
+      </div>
+      <div class="image-side">
+        <img src="/images/about-story.jpg" alt="Mriyuh in studio">
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Behind the Scenes</h2>
-      <p>Share what goes into producing your videos — from planning and filming to editing and publishing. Feel free to describe your creative process or team setup.</p>
-      <img src="/images/behind-the-scenes.jpg" alt="Behind the Scenes Image">
+    <!-- Our Values -->
+    <section class="values-section">
+      <h2 class="center-heading">Our Values</h2>
+      <div class="value-grid">
+        <div class="value-item">
+          <img src="/icons/generic-longevity.png" alt="Longevity Icon">
+          <h4>Longevity</h4>
+          <p>Built to last — in both design and quality. We don’t chase trends, and we don’t make pieces meant to be replaced.</p>
+        </div>
+        <div class="value-item">
+          <img src="/icons/generic-sustainability.png" alt="Sustainability Icon">
+          <h4>Sustainability</h4>
+          <p>Our production is optimised for the planet — because we have no interest in trashing our only home.</p>
+        </div>
+        <div class="value-item">
+          <img src="/icons/generic-aesthetic.png" alt="Aesthetic Icon">
+          <h4>Aesthetic</h4>
+          <p>Beauty is not a luxury — it’s nourishment for the soul. We create what truly satisfies.</p>
+        </div>
+        <div class="value-item">
+          <img src="/icons/generic-care.png" alt="Care Icon">
+          <h4>Care</h4>
+          <p>From the drawing board to your doorstep, we promise to give our full attention — always.</p>
+        </div>
+        <div class="value-item">
+          <img src="/icons/generic-discipline.png" alt="Discipline Icon">
+          <h4>Discipline</h4>
+          <p>Every detail is intentional. We honor tradition through craftsmanship and ethical choices.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Our Values</h2>
-      <p>Highlight the core values or principles that guide your content creation — such as authenticity, humor, education, storytelling, etc.</p>
-      <img src="/images/values.jpg" alt="Our Values Image">
+    <!-- Our Mission -->
+    <section class="about-section split-row reverse">
+      <div class="image-side">
+        <img src="/images/about-mission.jpg" alt="Mriyuh sewing">
+      </div>
+      <div class="text-side">
+        <h2>Our Mission</h2>
+        <p>Art has always been a platform to promote counterculture — to challenge societal norms and traditional values. But in a time when norms and values seem to have disappeared altogether, true counterculture is about bringing them back.</p>
+        <p>At Mriyuh Studio, we use story, design, and imagination to reintroduce what the world has lost: depth, discipline, harmony, and care.</p>
+        <p>Through our productions and designs, we aim to cultivate a beauty that endures — grounded in sustainability, crafted with quality, and built to outlast passing trends.</p>
+      </div>
     </section>
+
   </main>
+
   <div id="footer-placeholder"></div>
-  <script>
-    fetch('/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-      });
-  </script>
+  <script src="/assets/js/includes.js"></script>
 </body>
 </html>
