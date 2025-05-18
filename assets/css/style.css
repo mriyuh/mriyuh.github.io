@@ -6,12 +6,12 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: Georgia, serif;
   background-color: #f9f9f6;
   color: #222;
   line-height: 1.6;
   font-size: 16px;
-  padding-top: 120px; /* accounts for fixed header */
+  padding-top: 120px; /* to account for fixed header */
 }
 
 a {
@@ -89,7 +89,39 @@ main {
 /* ===== NAVIGATION BAR ===== */
 .header-nav {
   display: flex;
-  justify-content:
+  justify-content: center;         /* center the buttons */
+  align-items: center;
+  gap: 3rem;                        /* spacing between buttons */
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.header-nav a {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: #000;
+}
+
+.header-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+}
 
 /* ===== ABOUT PAGE ===== */
 .about-container {
