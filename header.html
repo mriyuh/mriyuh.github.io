@@ -1,31 +1,35 @@
-<header style="border-bottom: 1px solid #ccc; background-color: #f8f8f8;">
-  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+<header class="site-header">
+  <div class="header-top">
     <!-- Left: Logo -->
-    <div style="flex: 1;">
+    <div class="header-left">
       <a href="/index.html">
-        <img src="/images/mriyuh-studio-logo.png" alt="Mriyuh Logo" height="50" style="cursor: pointer;" />
+        <img src="/images/mriyuh-studio-logo.png" alt="Mriyuh Logo" height="50" class="header-logo" />
       </a>
     </div>
 
     <!-- Center: Title -->
-    <div style="flex: 1; text-align: center;">
-      <a href="/index.html" style="text-decoration: none; color: inherit;">
-        <div style="font-size: 24px; font-weight: bold;">Mriyuh Studio</div>
-        <div style="font-size: 12px; color: #555;">est. 2025</div>
+    <div class="header-center">
+      <a href="/index.html" class="header-title-link">
+        <div class="studio-name">Mriyuh Studio</div>
+        <div class="studio-sub">est. 2025</div>
       </a>
     </div>
 
     <!-- Right: Icons -->
-    <div style="flex: 1; display: flex; justify-content: flex-end; gap: 10px;">
-      <img src="/icons/youtube-icon.png" alt="YouTube" height="24" style="cursor: pointer;" />
-      <img src="/icons/user-icon.png" alt="User Login" height="24" style="cursor: pointer;" />
+    <div class="header-right">
+      <a href="https://www.youtube.com/@mriyuh" target="_blank">
+        <img src="/icons/youtube-icon.png" alt="YouTube" height="24" class="header-icon" />
+      </a>
+      <a href="/login.html">
+        <img src="/icons/user-icon.png" alt="User Login" height="24" class="header-icon" />
+      </a>
     </div>
   </div>
 
   <!-- Navigation Menu -->
-  <nav style="display: flex; justify-content: center; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background-color: #fff;">
-    <a href="/production.html" style="padding: 15px 20px; text-decoration: none; color: #333; font-weight: bold;">Production</a>
-    <a href="/marketplace.html" style="padding: 15px 20px; text-decoration: none; color: #333; font-weight: bold;">Marketplace</a>
-    <a href="/about.html" style="padding: 15px 20px; text-decoration: none; color: #333; font-weight: bold;">About Us</a>
+  <nav class="header-nav">
+    <a href="/production.html">Production</a>
+    <a href="/marketplace/store.html">Marketplace</a>
+    <a href="/about.html">About Us</a>
   </nav>
 </header>
