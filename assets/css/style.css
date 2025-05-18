@@ -1,4 +1,4 @@
-/* ===== Reset & Base ===== */
+/* ===== RESET & BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   color: #222;
   line-height: 1.6;
   font-size: 16px;
-  padding-top: 60px;
+  padding-top: 120px; /* accounts for fixed header */
 }
 
 a {
@@ -24,97 +24,69 @@ img {
   display: block;
 }
 
-/* ===== Container ===== */
+/* ===== CONTAINERS ===== */
 main {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
 }
 
-/* ===== Header Navigation ===== */
-header {
+/* ===== HEADER ===== */
+.site-header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
   z-index: 1000;
 }
 
-nav {
+.header-top {
   display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
-  font-weight: 500;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-nav a {
-  color: #333;
-  transition: color 0.2s ease;
+.header-left,
+.header-center,
+.header-right {
+  flex: 1;
 }
 
-nav a:hover {
-  color: #666;
-}
-
-/* ===== Footer ===== */
-footer {
+.header-center {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.875rem;
-  color: #888;
 }
 
-/* ===== Product Grid (Marketplace) ===== */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.header-title-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.product-card {
-  background-color: #fff;
-  border: 1px solid #e2e2e2;
-  border-radius: 6px;
-  padding: 1rem;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
+.studio-name {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.product-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.studio-sub {
+  font-size: 12px;
+  color: #555;
 }
 
-.product-card img {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 1rem;
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.product-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+.header-icon,
+.header-logo {
+  cursor: pointer;
 }
 
-.product-card p {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* ===== Buttons ===== */
-.buy-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #111;
-  color: #fff;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.buy-button:hover {
-  background-color: #333;
-}
+/* ===== NAVIGATION BAR ===== */
+.header-nav {
+  display: flex;
+  justify-content:
