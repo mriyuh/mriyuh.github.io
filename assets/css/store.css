@@ -52,6 +52,10 @@
   margin-bottom: 0.5rem;
 }
 
+.product-card.pre-release img {
+  opacity: 0.5;
+}
+
 /* === Product Status Badges === */
 
 .status {
@@ -80,4 +84,9 @@
 .status.sold-out {
   background-color: #f5b7b1;
   color: #922b21;
+}
+
+.status.pre-release {
+  background-color: #e8eaf6;
+  color: #3f51b5;
 }
