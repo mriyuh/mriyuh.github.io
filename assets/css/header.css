@@ -81,9 +81,9 @@
 }
 
 .nav-ornament {
-  width: 60px;
+  width: 80px;
   height: auto;
-  margin-top: 0.3rem;
+  margin-top: 0.1rem;
   transition: filter 0.2s ease;
   filter: brightness(1);
 }
@@ -94,4 +94,12 @@
 
 .nav-link-with-ornament:hover .nav-ornament {
   filter: brightness(1.8);
+}
+
+.nav-link-with-ornament .nav-ornament {
+  display: none;
+}
+
+.nav-link-with-ornament.active .nav-ornament {
+  display: block;
 }
