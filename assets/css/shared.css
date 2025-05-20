@@ -28,3 +28,10 @@
   vertical-align: middle;
   margin: 0 0.4rem;
 }
+
+a:hover,
+.button-link:hover,
+.header-nav a:hover,
+.footer-column a:hover {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
