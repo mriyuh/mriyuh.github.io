@@ -33,3 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
   loadInclude("header-placeholder", "/header.html");
   loadInclude("footer-placeholder", "/footer.html");
 });
+
+let remaining = 1000;
+const counterEl = document.getElementById('drop-count');
+
+const dropInterval = setInterval(() => {
+  if (remaining > 0) {
+    remaining--;
+    counterEl.textContent = remaining;
+  } else {
+    clearInterval(dropInterval);
+  }
+}, 15000); // drops every 15 seconds (adjust as needed)
+
