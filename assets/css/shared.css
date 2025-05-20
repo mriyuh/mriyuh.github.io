@@ -33,5 +33,6 @@ a:hover,
 .button-link:hover,
 .header-nav a:hover,
 .footer-column a:hover {
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  transition: text-shadow 0.2s ease, color 0.2s ease;
 }
