@@ -29,66 +29,34 @@
     </a>
   </section>
 
-  <!-- Drop + Video Split Section -->
-  <main class="home-container">
-    <section class="intro-split">
-      <!-- Drop Counter -->
-      <!-- Drop Banner Section -->
-        <section class="drop-banner">
-          <img src="/images/banner-summerdrop.jpg" alt="2025 Summer Drop Banner" class="drop-banner-img">
-        </section>
-        
-      <!-- Drop Counter Display Section -->
-        <section class="drop-highlight">
-          <h2 class="drop-title">2025 Summer Drop</h2>
-        
-          <div class="drop-ring-wrapper">
-            <div class="drop-ring">
-              <img src="/images/products/garm001.jpg" alt="Drop Product" class="drop-ring-img">
-            </div>
-            <p class="drop-count-label">Only <span id="drop-count">1000</span> pieces remaining</p>
-          </div>
-        </section>
-        
-        <script>
-          // Simulate inventory countdown
-          let remaining = 1000;
-          const dropCountElement = document.getElementById("drop-count");
-        
-          setInterval(() => {
-            if (remaining > 0) {
-              remaining--;
-              dropCountElement.textContent = remaining;
-            }
-          }, 10000); // adjust as needed
-        </script>
+<!-- Drop + Video Section -->
+<main class="home-container">
 
-      <!-- Latest Video Preview -->
-      <div class="intro-text-image">
-        <h2 style="margin-bottom: 1rem;">Check out our latest video:</h2>
-        <a href="https://youtube.com/yourvideo" target="_blank">
-          <img src="/images/home-latest-video-thumb.jpg" alt="Latest YouTube Video" class="intro-img">
-        </a>
-      </div>
-    </section>
-  </main>
+  <!-- Summer Drop Banner -->
+  <section class="drop-banner">
+    <img src="/images/banner-summerdrop.jpg" alt="2025 Summer Drop Banner" class="drop-banner-img">
+  </section>
 
-  <!-- Footer Include -->
-  <div id="footer-placeholder"></div>
+  <!-- Drop Counter Section -->
+  <section class="drop-feature">
+    <h2>2025 Summer Drop</h2>
 
-  <!-- JS Includes -->
-  <script src="/assets/js/includes.js"></script>
+    <div class="drop-ring">
+      <img src="/images/products/garm001.jpg" alt="Drop Product">
+    </div>
 
-  <!-- Mock Dynamic Counter -->
-  <script>
-    let remaining = 100;
-    setInterval(() => {
-      if (remaining > 0) {
-        remaining--;
-        document.getElementById('drop-count').textContent = remaining;
-      }
-    }, 15000);
-  </script>
+    <p class="drop-counter-text">Only <span id="drop-count">1000</span> pieces remaining</p>
+  </section>
+
+  <!-- Latest Video Preview -->
+  <section class="intro-text-image">
+    <h2 style="margin-bottom: 1rem;">Check out our latest video:</h2>
+    <a href="https://youtube.com/yourvideo" target="_blank">
+      <img src="/images/home-latest-video-thumb.jpg" alt="Latest YouTube Video" class="intro-img">
+    </a>
+  </section>
+
+</main>
 
 </body>
 </html>
