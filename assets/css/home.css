@@ -33,31 +33,6 @@
   flex-wrap: wrap;
 }
 
-.drop-counter-box {
-  flex: 1;
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  padding: 2rem;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.drop-counter-box h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.drop-description {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.drop-note {
-  font-size: 0.8rem;
-  color: #888;
-}
-
 .intro-text-image {
   flex: 1;
   position: relative;
@@ -105,3 +80,54 @@
 .button-link:hover {
   background-color: #333;
 }
+
+/* ===== Summer Drop Banner ===== */
+.summer-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+
+/* ===== Drop Feature Section ===== */
+.drop-feature {
+  background-color: #FFFCF4;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.drop-feature h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* ===== Circular Counter with Image ===== */
+.drop-ring {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border: 8px solid #222;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.drop-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ===== Counter Text Below Ring ===== */
+.drop-counter-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 0.5rem;
+}
+
