@@ -33,11 +33,35 @@
   <main class="home-container">
     <section class="intro-split">
       <!-- Drop Counter -->
-      <div class="drop-counter-box">
-        <h2>Current Drop</h2>
-        <p class="drop-description">Only <span id="drop-count">100</span> pieces remaining</p>
-        <small class="drop-note">Updated in real time</small>
-      </div>
+      <!-- Drop Banner Section -->
+        <section class="drop-banner">
+          <img src="/images/banner-summerdrop.jpg" alt="2025 Summer Drop Banner" class="drop-banner-img">
+        </section>
+        
+      <!-- Drop Counter Display Section -->
+        <section class="drop-highlight">
+          <h2 class="drop-title">2025 Summer Drop</h2>
+        
+          <div class="drop-ring-wrapper">
+            <div class="drop-ring">
+              <img src="/images/products/garm001.jpg" alt="Drop Product" class="drop-ring-img">
+            </div>
+            <p class="drop-count-label">Only <span id="drop-count">1000</span> pieces remaining</p>
+          </div>
+        </section>
+        
+        <script>
+          // Simulate inventory countdown
+          let remaining = 1000;
+          const dropCountElement = document.getElementById("drop-count");
+        
+          setInterval(() => {
+            if (remaining > 0) {
+              remaining--;
+              dropCountElement.textContent = remaining;
+            }
+          }, 10000); // adjust as needed
+        </script>
 
       <!-- Latest Video Preview -->
       <div class="intro-text-image">
