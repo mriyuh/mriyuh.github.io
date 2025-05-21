@@ -105,9 +105,10 @@
 }
 
 .banner-flag {
-  height: 16px;
+  height: 1em; /* Matches text height */
   width: auto;
   vertical-align: middle;
+  margin: 0 0.4rem;
 }
 
 .close-banner {
