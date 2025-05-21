@@ -49,26 +49,33 @@
 }
 <!===FOOTER BANNER>
 .footer-banner {
-  background-color: #222;
+  background-color: #111;
   color: #fff;
-  padding: 0.75rem 1rem;
   text-align: center;
-  font-size: 0.85rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  border-top: 1px solid #444;
+  padding: 1rem 1rem 1.5rem;
+  font-size: 0.9rem;
 }
 
-.footer-banner span {
-  white-space: nowrap;
+.footer-banner-text {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.footer-flags {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .footer-flag {
-  height: 1em;
+  height: 18px;
   width: auto;
-  vertical-align: middle;
+  display: inline-block;
+  filter: brightness(1.1);
+  transition: transform 0.2s ease;
 }
 
+.footer-flag:hover {
+  transform: scale(1.1);
+}
