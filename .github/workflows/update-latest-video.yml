@@ -1,0 +1,36 @@
+name: Update Latest YouTube Video
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # runs every day at 3 AM UTC
+  workflow_dispatch:      # allows manual trigger from GitHub UI
+
+jobs:
+  update-video:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install Dependencies
+      run: npm install node-fetch@2
+
+    - name: Run Fetch Script
+      run: node site/scripts/fetch-latest-video.js
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+
+    - name: Commit and Push Updated JSON
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add site/data/latest-video.json
+        git commit -m "Update latest YouTube video [auto]" || echo "No changes"
+        git push
