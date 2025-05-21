@@ -9,8 +9,7 @@
 
 /* ===== PLEDGE SECTION ===== */
 .footer-pledge {
-  border-top: 1px solid #444;
-  padding: 3rem 1rem 2rem;
+  padding: 3rem 1rem 3rem;
   text-align: center;
 }
 
@@ -89,6 +88,7 @@
   max-width: 1000px;
   margin: auto;
   flex-shrink: 1;
+  padding: 1rem;
 }
 
 .footer-column {
