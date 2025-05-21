@@ -91,10 +91,11 @@
   align-items: flex-end;
   gap: 3rem;
   padding: 0.8rem 0;
-  height: 60px; /* fixed height */
-  position: relative;
-  border-bottom: 1px solid #ccc;
+  height: 60px;
   background-color: #FFFCF4;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  z-index: 10;
 }
 
 .nav-link-with-ornament {
@@ -117,7 +118,7 @@
 
 .nav-link-with-ornament:hover a,
 .nav-link-with-ornament.active a {
-  transform: translateY(-4px); /* lift text */
+  transform: translateY(-10px); /* lift further */
 }
 
 .nav-ornament {
@@ -136,4 +137,3 @@
   display: block;
   opacity: 1;
 }
-
