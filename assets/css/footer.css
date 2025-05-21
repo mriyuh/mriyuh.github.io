@@ -47,3 +47,28 @@
   margin-top: 2rem;
   color: #999;
 }
+<!===FOOTER BANNER>
+.footer-banner {
+  background-color: #222;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  border-top: 1px solid #444;
+}
+
+.footer-banner span {
+  white-space: nowrap;
+}
+
+.footer-flag {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+}
+
