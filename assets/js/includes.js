@@ -16,17 +16,19 @@ function loadInclude(id, file) {
 function highlightActiveNav() {
   const path = window.location.pathname;
 
-  document.querySelectorAll(".header-nav a").forEach(link => {
-    const href = link.getAttribute("href");
+  document.querySelectorAll(".nav-link-with-ornament").forEach(wrapper => {
+    const anchor = wrapper.querySelector("a");
+    const href = anchor.getAttribute("href");
 
     if (
       path === href || 
       (href.includes("/marketplace") && path.startsWith("/marketplace/"))
     ) {
-      link.classList.add("active");
+      wrapper.classList.add("active"); // ✅ add to the wrapper <div>
     }
   });
 }
+
 
 // === Run on Page Load ===
 document.addEventListener("DOMContentLoaded", () => {
