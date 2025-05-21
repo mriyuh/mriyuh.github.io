@@ -11,14 +11,17 @@
 .header-top {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  justify-items: center;
   align-items: center;
   padding: 10px 20px;
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 
 .header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 
@@ -82,7 +85,7 @@
   font-family: Georgia, serif;
   font-size: 1rem;
   color: #333;
-  font-weight: 600;
+  font-weight: normal;
   text-decoration: none;
   transition: color 0.2s ease;
 }
