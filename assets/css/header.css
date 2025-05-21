@@ -101,8 +101,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   height: 100%;
-  justify-content: center;
   position: relative;
 }
 
@@ -112,28 +112,30 @@
   color: #333;
   font-weight: normal;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.nav-link-with-ornament a:hover {
+.nav-link-with-ornament:hover a {
   color: #aaa;
+  transform: translateY(-6px); /* move the text slightly upward */
 }
 
 .nav-ornament {
   width: 60px;
   height: auto;
   margin-top: 0.25rem;
-  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, opacity 0.2s ease;
   filter: brightness(1);
   display: none;
   position: absolute;
-  bottom: 0; /* stick to bottom of nav area */
+  bottom: 0;
+  opacity: 0;
 }
 
-.nav-link-with-ornament.active .nav-ornament {
-  display: block;
-}
-
+.nav-link-with-ornament.active .nav-ornament,
 .nav-link-with-ornament:hover .nav-ornament {
+  display: block;
+  opacity: 1;
   filter: brightness(1.8);
 }
+
