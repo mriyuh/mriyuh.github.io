@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 10px;
   max-width: 1200px;
   margin: auto;
   position: relative;
@@ -90,8 +90,8 @@
   justify-content: center;
   align-items: flex-end;
   gap: 3rem;
-  padding: 0.8rem 0;
-  height: 60px;
+  padding: 0.5rem 0;
+  height: 50px;
   background-color: #FFFCF4;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -132,8 +132,13 @@
   opacity: 0;
 }
 
-.nav-link-with-ornament.active .nav-ornament,
+.nav-link-with-ornament.active .nav-ornament {
+  display: block;
+  opacity: 1;
+}
+
 .nav-link-with-ornament:hover .nav-ornament {
   display: block;
   opacity: 1;
+  filter: brightness(1.6); /* or adjust to taste */
 }
