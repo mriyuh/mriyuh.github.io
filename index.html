@@ -20,15 +20,26 @@
   <div id="header-placeholder"></div>
 
 <main class="home-container">
+  <!-- Slideshow Include -->
+<section class="gallery-slideshow">
+  <button class="gallery-btn prev" onclick="changeSlide(-1)">&#10094;</button>
 
-  <!-- Horizontal Gallery Banner -->
-  <section class="scroll-banner">
-    <div class="scroll-container">
-      <img src="/assets/images/indexgallery1.png" alt="Gallery 1">
-      <img src="/assets/images/indexgallery2.png" alt="Gallery 2">
-      <img src="/assets/images/indexgallery3.png" alt="Gallery 3">
-    </div>
-  </section>
+  <div class="gallery-container">
+    <img src="/assets/images/indexgallery1.png" class="gallery-slide active" alt="Gallery 1">
+    <img src="/assets/images/indexgallery2.png" class="gallery-slide" alt="Gallery 2">
+    <img src="/assets/images/indexgallery3.png" class="gallery-slide" alt="Gallery 3">
+  </div>
+
+  <button class="gallery-btn next" onclick="changeSlide(1)">&#10095;</button>
+
+  <!-- Dots -->
+  <div class="gallery-dots" id="gallery-dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+</section>
+
 
  <!-- Drop + Video Two-Column Layout -->
 <section class="drop-video-section">
@@ -63,7 +74,7 @@
 </main>
 
   <!-- footer Include -->
-  <div id=footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 
   <!-- JS Includes -->
   <script src="/assets/js/includes.js"></script>
