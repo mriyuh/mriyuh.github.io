@@ -34,7 +34,7 @@
 }
 
 .scroll-container img {
-  height: 120px;
+  height: 200px;
   border-radius: 6px;
   object-fit: cover;
 }
@@ -88,32 +88,35 @@
   width: 100%;
   background-color: #222;
   color: #fff;
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  z-index: 1100;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.85rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0.5rem 1rem;
+  z-index: 1100;
+  gap: 0.5rem;
 }
 
 .announcement-bar span {
-  flex-grow: 1;
+  text-align: center;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+.banner-flag {
+  height: 16px;
+  width: auto;
+  vertical-align: middle;
 }
 
 .close-banner {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin-left: 1rem;
+  margin-left: 0.75rem;
+  padding: 0;
+  line-height: 1;
 }
-
-.site-header {
-  top: 2.5rem; /* Pushes header down beneath banner */
-}
-
-
-
