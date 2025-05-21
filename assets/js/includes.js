@@ -48,29 +48,28 @@ const dropInterval = setInterval(() => {
   }
 }, 15000); // drops every 15 seconds (adjust as needed)
 
-// === Load Latest YouTube Video Preview ===
+// === Check out Latest Video ===
+
 document.addEventListener("DOMContentLoaded", () => {
-  const videoLink = document.getElementById('latest-video-link');
-  const videoThumb = document.getElementById('latest-video-thumb');
-  const videoTitle = document.getElementById('latest-video-title');
-  const videoDate  = document.getElementById('latest-video-date');
+  const container = document.getElementById("latest-video-link");
+  const videoUrl = container.dataset.url;
 
-  if (videoLink && videoThumb && videoTitle && videoDate) {
-    fetch('/site/data/latest-video.json')
-      .then(res => res.json())
-      .then(data => {
-        const videoUrl = `https://www.youtube.com/watch?v=${data.videoId}`;
-        const publishDate = new Date(data.publishedAt).toLocaleDateString('en-US', {
-          year: 'numeric', month: 'long', day: 'numeric'
-        });
+  // Extract video ID
+  const match = videoUrl.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+  const videoId = match ? match[1] : null;
 
-        videoLink.href = videoUrl;
-        videoThumb.src = data.thumbnail;
-        videoTitle.textContent = data.title;
-        videoDate.textContent = `Uploaded on ${publishDate}`;
-      })
-      .catch(err => console.error("Error loading latest video:", err));
-  }
+  if (!videoId) return;
+
+  // Use YouTube oEmbed endpoint
+  fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("latest-video-thumb").src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+      document.getElementById("latest-video-title").textContent = data.title;
+      document.getElementById("latest-video-date").textContent = "Click to watch →";
+      container.href = videoUrl;
+    })
+    .catch(err => console.error("Video fetch error:", err));
 });
 
 // === Home Slideshow Logic ===
