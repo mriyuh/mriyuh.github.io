@@ -73,4 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// === Home Slideshow Logic ===
+
+let currentSlide = 0;
+
+function changeSlide(n) {
+  const slides = document.querySelectorAll('.gallery-slide');
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + n + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+
 
