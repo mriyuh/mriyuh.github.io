@@ -55,28 +55,24 @@
 
 /* ===== HEADER Logo ===== */
 .header-logo {
-  height: 70px;
+  height: 80px;
   width: auto;
   display: block;
-  transition: filter 0.2s ease;
 }
 
-.header-logo:hover {
-  filter: brightness(1.3);
-}
 
 /* ===== Title Ornament ===== */
 .studio-title-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.3rem;
   flex-wrap: nowrap;
   margin-top: 0.25rem;
 }
 
 .studio-ornament {
-  height: 32px;
+  height: 36px;
   width: auto;
   object-fit: contain;
   margin-top: 0.1rem;
@@ -87,21 +83,27 @@
   transform: scaleX(-1);
 }
 
-
 /* ===== NAVIGATION BAR ===== */
+/* === Menu Bar Navigation === */
 .header-nav {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 3rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  padding: 0.8rem 0;
+  height: 60px; /* fixed height */
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  background-color: #FFFCF4;
 }
 
 .nav-link-with-ornament {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
 }
 
 .nav-link-with-ornament a {
@@ -120,17 +122,18 @@
 .nav-ornament {
   width: 60px;
   height: auto;
-  margin-top: 0.05rem;
+  margin-top: 0.25rem;
   transition: filter 0.2s ease;
   filter: brightness(1);
   display: none;
+  position: absolute;
+  bottom: 0; /* stick to bottom of nav area */
+}
+
+.nav-link-with-ornament.active .nav-ornament {
+  display: block;
 }
 
 .nav-link-with-ornament:hover .nav-ornament {
   filter: brightness(1.8);
-}
-
-/* Show ornament only if current page is active */
-.nav-link-with-ornament.active .nav-ornament {
-  display: block;
 }
