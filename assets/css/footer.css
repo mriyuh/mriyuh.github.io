@@ -1,96 +1,17 @@
-/* ===== FOOTER SECTION ===== */
+/* ===== FOOTER CONTAINER ===== */
 .site-footer {
   background-color: #111;
   color: #fff;
   font-size: 13px;
   padding: 2.5rem 1rem 3rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.footer-content {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.footer-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.footer-column h5 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.footer-column a {
-  text-decoration: none;
-  color: #ccc;
-  transition: color 0.2s ease;
-  font-size: 0.875rem;
-}
-
-.footer-column a:hover {
-  color: #fff;
-}
-
-.footer-column p {
-  margin: 0.5rem 0;
-  font-size: 0.875rem;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 0.75rem;
-  margin-top: 2rem;
-  color: #999;
-}
-
-<!===FOOTER BANNER>
-
-.footer-banner {
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 1rem 2.5rem; /* bottom padding gives space below */
-  font-size: 0.9rem;
-  font-family: 'Georgia', serif;
-}
-
-.footer-banner-text {
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.footer-flags {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  margin-bottom: 1rem; /* space between flags and footer bottom */
-}
-
-.footer-flag {
-  height: 18px;
-  width: auto;
-  display: inline-block;
-  filter: brightness(1.1);
-  transition: transform 0.2s ease;
-}
-
-.footer-flag:hover {
-  transform: scale(1.1);
-}
-
-/* ===== Footer Pledge ===== */
+/* ===== PLEDGE SECTION ===== */
 .footer-pledge {
-  background-color: #111;
-  color: #fff;
+  border-top: 1px solid #444;
   padding: 3rem 1rem 2rem;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  border-top: 1px solid #444;
 }
 
 .footer-pledge h3 {
@@ -101,17 +22,27 @@
 
 .pledge-columns {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
+  gap: 2rem;
   max-width: 1000px;
   margin: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .pledge-item {
-  flex: 1 1 250px;
+  flex: 1;
+  text-align: center;
   font-size: 0.95rem;
   color: #ccc;
+  transition: transform 0.3s ease;
+}
+
+.pledge-icon {
+  width: 50px;
+  height: auto;
+  margin: 0.5rem 0;
+  opacity: 0.9;
 }
 
 .pledge-item h4 {
@@ -120,13 +51,6 @@
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: #fff;
-}
-
-.pledge-icon {
-  width: 50px;
-  height: auto;
-  margin-bottom: 0.8rem;
-  opacity: 0.9;
 }
 
 .pledge-item p {
@@ -145,3 +69,96 @@
   color: #fff;
 }
 
+/* Shrink pledge on smaller screens */
+@media (max-width: 700px) {
+  .pledge-item {
+    font-size: 0.75rem;
+  }
+
+  .pledge-icon {
+    width: 36px;
+  }
+}
+
+/* ===== MAIN GRID (Follow, Misc, Contact) ===== */
+.footer-main-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-column h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ===== FOOTER BANNER WITH FLAGS ===== */
+.footer-banner {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem 2.5rem;
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+}
+
+.footer-banner-text {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.footer-flags {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-flag {
+  height: 18px;
+  width: auto;
+  display: inline-block;
+  filter: brightness(1.1);
+  transition: transform 0.2s ease;
+}
+
+.footer-flag:hover {
+  transform: scale(1.1);
+}
+
+/* ===== BOTTOM COPYRIGHT ===== */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  color: #999;
+}
