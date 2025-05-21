@@ -1,43 +1,79 @@
-/* ===== HOME BANNER ===== */
-.banner-section {
+/* ===== HOME BANNER Slideshow ===== */
+.gallery-slideshow {
+  position: relative;
+  max-width: 1000px;
+  margin: 3rem auto;
+  background-color: #FFFCF4;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-container {
+  display: flex;
   width: 100%;
-  background-color: #fff;
-  color: #111;
-  padding: 1rem 2rem;
-  font-weight: 500;
-  font-size: 1rem;
+  position: relative;
+}
+
+.gallery-slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.gallery-slide.active {
+  display: block;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 252, 244, 0.8);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.gallery-btn:hover {
+  background-color: rgba(255, 252, 244, 1);
+}
+
+.gallery-btn.prev {
+  left: 0;
+}
+
+.gallery-btn.next {
+  right: 0;
+}
+
+
+.gallery-dots {
   text-align: center;
-  margin-top: 120px;
+  margin: 1rem 0;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 6px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.banner-text {
-  max-width: 1000px;
-  margin: auto;
-  text-decoration: none;
-  color: inherit;
+.dot.active {
+  background-color: #222;
+  width: 14px;
+  height: 14px;
 }
 
-/* === Horizontal Scroll Banner === */
-.scroll-banner {
-  background-color: #FFFCF4;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.scroll-container {
-  display: flex;
-  gap: 1rem;
-  padding: 0 2rem;
-}
-
-.scroll-container img {
-  height: 200px;
-  border-radius: 6px;
-  object-fit: cover;
-}
 
 /* === Two-Column Section (Drop + Video) === */
 .drop-video-section {
