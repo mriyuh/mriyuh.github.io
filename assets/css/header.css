@@ -7,6 +7,7 @@
   border-bottom: none;
   z-index: 1000;
   line-height: 1;
+  margin-bottom: 0;
 }
 
 .header-top {
@@ -97,6 +98,7 @@
   height: auto;
   background-color: #FFFCF4;
   border-bottom: 1px solid #ccc;
+  margin-top: 0;
 }
 
 /* === Ornament Positioning === */
