@@ -23,23 +23,22 @@
 
   <!-- Slideshow Include -->
   <section class="gallery-slideshow">
-    <button class="gallery-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+  <div class="gallery-inner">
+    <img src="/assets/images/gallery1.png" class="gallery-slide active" alt="Gallery 1" />
+    <img src="/assets/images/gallery2.png" class="gallery-slide" alt="Gallery 2" />
+    <img src="/assets/images/gallery3.png" class="gallery-slide" alt="Gallery 3" />
+  </div>
 
-    <div class="gallery-container">
-      <img src="/assets/images/indexgallery1.png" class="gallery-slide active" alt="Gallery 1">
-      <img src="/assets/images/indexgallery2.png" class="gallery-slide" alt="Gallery 2">
-      <img src="/assets/images/indexgallery3.png" class="gallery-slide" alt="Gallery 3">
-    </div>
+  <button class="gallery-btn prev">&#10094;</button>
+  <button class="gallery-btn next">&#10095;</button>
 
-    <button class="gallery-btn next" onclick="changeSlide(1)">&#10095;</button>
+  <div class="gallery-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
 
-    <!-- Dots -->
-    <div class="gallery-dots" id="gallery-dots">
-      <span class="dot active" onclick="goToSlide(0)"></span>
-      <span class="dot" onclick="goToSlide(1)"></span>
-      <span class="dot" onclick="goToSlide(2)"></span>
-    </div>
-  </section>
 
   <!-- Current Drop -->
   <section class="content-section">
