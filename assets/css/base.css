@@ -33,3 +33,7 @@ main {
   margin: auto;
   padding: 2rem;
 }
+
+body {
+  padding-top: 80px; /* try this or 60px */
+}
