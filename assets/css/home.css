@@ -1,9 +1,3 @@
-/* Remove margin/padding on body to ensure true full width */
-body {
-  margin: 0;
-  padding: 0;
-}
-
 /* Full-width slideshow section */
 .gallery-slideshow {
   width: 100vw;
