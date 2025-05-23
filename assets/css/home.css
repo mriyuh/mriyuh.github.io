@@ -106,7 +106,6 @@
 }
 
 /=== studio drop ===/
-
 .studio-drop-section {
   padding: 2rem 1rem;
   background-color: #FFFCF4;
@@ -129,7 +128,6 @@
 
 .drop-ornament {
   height: 30px;
-  width: auto;
   opacity: 0.8;
 }
 
@@ -141,8 +139,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 2rem;
+  align-items: center;
 }
 
 .drop-image img {
@@ -161,24 +159,29 @@
   margin-bottom: 1rem;
 }
 
-.drop-counter-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #222;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5rem;
+/* Counter Bar */
+.drop-bar-container {
+  margin-bottom: 1rem;
 }
 
-.drop-subtext {
+.drop-bar-bg {
+  background-color: #eee;
+  border-radius: 20px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.drop-bar-fill {
+  background-color: #222;
+  height: 100%;
+  width: 100%;
+  transition: width 0.5s ease;
+}
+
+.drop-counter-text {
   font-size: 0.95rem;
+  margin-top: 0.5rem;
   color: #444;
-  margin-bottom: 1rem;
 }
 
 .drop-btn {
@@ -194,6 +197,23 @@
 
 .drop-btn:hover {
   background-color: #333;
+}
+
+/* Responsive behavior */
+@media (max-width: 700px) {
+  .drop-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .drop-info {
+    text-align: center;
+  }
+
+  .drop-bar-container {
+    margin: 1rem auto;
+    width: 80%;
+  }
 }
 
 /* === Latest Video Section === */
