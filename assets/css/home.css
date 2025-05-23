@@ -161,6 +161,13 @@
   margin-bottom: 1rem;
 }
 
+.drop-desc {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
 /* Counter Bar */
 .drop-bar-container {
   margin-bottom: 1rem;
