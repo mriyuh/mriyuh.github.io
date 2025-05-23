@@ -132,11 +132,10 @@
   align-items: flex-start; 
   gap: 2.2rem; 
   height: 70px;
-  background-color: ##CBE8D3;
+  background-color: #CBE8D3;
   border-bottom: 1px solid #ccc;
   margin-top: 0;
   padding-top: 100px;
-  padding-bottom: 5px;
 }
 
 /* === Ornament Positioning === */
