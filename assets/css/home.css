@@ -114,27 +114,25 @@
   text-align: center;
 }
 
-.drop-title-wrap {
+/* Centered single ornament under drop title */
+.drop-title-wrap.single {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .drop-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.drop-ornament {
-  height: 30px;
-  opacity: 0.8;
-}
-
-.drop-ornament.flipped {
-  transform: scaleX(-1);
+.drop-underline-ornament {
+  height: 32px;
+  width: auto;
+  opacity: 0.85;
 }
 
 .drop-content {
