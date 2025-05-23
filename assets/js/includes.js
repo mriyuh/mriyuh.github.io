@@ -31,7 +31,7 @@ function highlightActiveNav() {
 
 
 // === Drop Counter ===
-<script>
+
   let remaining = 1000;
   const max = 1000;
 
@@ -52,7 +52,7 @@ function highlightActiveNav() {
   }, 15000);
 
   updateCounter();
-</script>
+
 
 
 // === Check out Latest Video ===
