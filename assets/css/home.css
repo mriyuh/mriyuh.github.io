@@ -115,10 +115,12 @@
 }
 
 /* Centered single ornament under drop title */
-.drop-title-wrap.single {
+.drop-title-wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack title and ornament */
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
@@ -126,13 +128,11 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
-.drop-underline-ornament {
-  height: 32px;
-  width: auto;
-  opacity: 0.85;
+.drop-ornament.underline {
+  height: 30px;
+  opacity: 0.8;
 }
 
 .drop-content {
