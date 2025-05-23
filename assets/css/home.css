@@ -1,12 +1,11 @@
 /* === SLIDESHOW SECTION === */
 .gallery-slideshow {
   width: 100vw;
-  height: auto;
+  max-height: 500px;
   overflow: hidden;
+  position: relative;
   margin: 0;
   padding: 0;
-  position: relative;
-  display: block;
   z-index: 1;
 }
 
@@ -14,12 +13,13 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .gallery-slide {
   flex-shrink: 0;
   width: 100vw;
+  max-height: 500px;
   height: auto;
   display: none;
   object-fit: cover;
@@ -34,21 +34,29 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  background: none;
   border: none;
-  color: #fff;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   cursor: pointer;
   z-index: 2;
+  width: 40px;
+  height: 40px;
 }
 
 .gallery-btn.prev {
   left: 1rem;
+  background-image: url('/assets/icons/custom-arrow-left.svg'); /* ← Replace with your actual SVG path */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .gallery-btn.next {
   right: 1rem;
+  background-image: url('/assets/icons/custom-arrow-right.svg'); /* ← Replace with your actual SVG path */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /* Dots below slideshow */
@@ -61,28 +69,39 @@
 }
 
 .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+  background-image: url('/assets/icons/custom-dot.svg'); /* ← Replace with your dot icon path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .dot.active {
-  background-color: #fff;
+  opacity: 1;
 }
 
-/* Responsive: Ensure full width scaling */
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
   .gallery-slide {
     height: auto;
+    max-height: 500px;
   }
 
   .gallery-btn {
-    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
   }
 }
 
