@@ -85,18 +85,17 @@
 /* ===== MAIN GRID (Follow, Misc, Contact) ===== */
 .footer-main-grid {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* allow wrapping on small screens */
   gap: 2rem;
   max-width: 1000px;
-  margin-left: 2rem;
-  flex-shrink: 1;
+  margin: auto; /* center horizontally */
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 .footer-column {
-  flex: 1 1 200px;
-  min-width: 150px;
+  flex: 1 1 250px;
+  min-width: 180px;
   font-size: 0.8rem;
 }
 
@@ -113,6 +112,7 @@
   font-size: 0.8rem;
   font-family: 'Source Sans Pro', sans-serif;
   color: #ccc;
+  text-decoration: none;
 }
 
 .footer-column a:hover {
@@ -120,7 +120,6 @@
 }
 
 .footer-column p {
-  font-size: 0.8rem;
   color: #ccc;
 }
 
