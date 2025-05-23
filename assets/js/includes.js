@@ -30,23 +30,30 @@ function highlightActiveNav() {
 }
 
 
-// === Run on Page Load ===
-document.addEventListener("DOMContentLoaded", () => {
-  loadInclude("header-placeholder", "/header.html");
-  loadInclude("footer-placeholder", "/footer.html");
-});
+// === Drop Counter ===
+<script>
+  let remaining = 1000;
+  const max = 1000;
 
-let remaining = 1000;
-const counterEl = document.getElementById('drop-count');
-
-const dropInterval = setInterval(() => {
-  if (remaining > 0) {
-    remaining--;
-    counterEl.textContent = remaining;
-  } else {
-    clearInterval(dropInterval);
+  function updateCounter() {
+    const fill = document.getElementById('drop-fill');
+    const count = document.getElementById('drop-count');
+    count.textContent = remaining;
+    const percent = (remaining / max) * 100;
+    fill.style.width = percent + '%';
   }
-}, 15000); // drops every 15 seconds (adjust as needed)
+
+  // Simulate countdown (for demo)
+  setInterval(() => {
+    if (remaining > 0) {
+      remaining--;
+      updateCounter();
+    }
+  }, 15000);
+
+  updateCounter();
+</script>
+
 
 // === Check out Latest Video ===
 
