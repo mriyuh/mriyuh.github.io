@@ -41,7 +41,7 @@
 }
 
 .pledge-icon {
-  width: 100px;
+  width: 140px;
   height: auto;
   margin: 0.75rem 0 1rem;
   opacity: 0.95;
@@ -78,7 +78,7 @@
   }
 
   .pledge-icon {
-    width: 48px;
+    width: 80px;
   }
 }
 
@@ -89,7 +89,7 @@
   flex-wrap: nowrap;
   gap: 2rem;
   max-width: 1000px;
-  margin: auto;
+  margin-left: 2rem;
   flex-shrink: 1;
   padding: 1rem;
 }
