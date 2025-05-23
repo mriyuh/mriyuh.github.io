@@ -28,12 +28,3 @@ img {
 }
 
 /* ===== CONTAINERS ===== */
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-}
-
-body {
-  padding-top: 80px; /* try this or 60px */
-}
