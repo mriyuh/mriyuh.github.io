@@ -132,10 +132,9 @@
   align-items: flex-start; 
   gap: 2.2rem; 
   height: 70px;
-  background-color: #FDFFEF;
+  background-color: #E2DFD9;
   border-bottom: 1px solid #ccc;
-  margin-top: 0;
-  padding-top: 150px;
+  margin-top: 150px;
 }
 
 /* === Ornament Positioning === */
