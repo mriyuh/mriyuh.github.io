@@ -130,7 +130,7 @@
 }
 
 .drop-underline-ornament {
-  height: 60px;       /* adjust size here */
+  height: 20px;       /* adjust size here */
   max-width: 600px;   /* optional: control max width */
   opacity: 0.8;
   margin-bottom:2rem;
