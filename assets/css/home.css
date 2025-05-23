@@ -121,7 +121,6 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
 }
 
 .drop-title {
@@ -131,9 +130,10 @@
 }
 
 .drop-underline-ornament {
-  height: 30px;       /* adjust size here */
+  height: 60px;       /* adjust size here */
   max-width: 600px;   /* optional: control max width */
   opacity: 0.8;
+  margin-bottom:2rem;
 }
 
 .drop-content {
