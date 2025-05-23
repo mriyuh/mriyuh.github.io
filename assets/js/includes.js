@@ -60,15 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoUrl = container.dataset.url;
     const match = videoUrl.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
     const videoId = match ? match[1] : null;
-
+  
     if (videoId) {
       fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`)
         .then(res => res.json())
         .then(data => {
-          document.getElementById("latest-video-thumb").src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+          document.getElementById("latest-video-thumb").src = data.thumbnail_url;
           document.getElementById("latest-video-title").textContent = data.title;
           document.getElementById("latest-video-date").textContent = "Click to watch →";
           container.href = videoUrl;
+          document.getElementById("latest-video-button").href = videoUrl;
         })
         .catch(err => console.error("Video fetch error:", err));
     }
