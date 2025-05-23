@@ -228,23 +228,39 @@
 
 
 /* === Latest Video Section === */
-.latest-video-info {
-  margin-top: 1rem;
+.latest-video-section {
   text-align: center;
+  padding: 4rem 1rem 5rem;
+}
+
+.latest-video-thumb {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto 1.5rem;
 }
 
 .latest-video-title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  color: #222;
 }
 
-.latest-video-date {
-  font-size: 0.85rem;
-  color: #666;
+.watch-now-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-@media (max-width: 768px) {
-  .drop-video-section {
-    flex-direction: column;
-  }
+.watch-now-btn:hover {
+  background-color: #333;
 }
+
