@@ -130,8 +130,9 @@
   font-weight: 600;
 }
 
-.drop-ornament.underline {
-  height: 16px;
+.drop-underline-ornament {
+  height: 30px;       /* adjust size here */
+  max-width: 300px;   /* optional: control max width */
   opacity: 0.8;
 }
 
