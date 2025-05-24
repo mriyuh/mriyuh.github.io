@@ -86,47 +86,6 @@
   transform: scaleX(-1);
 }
 
-@media (max-width: 768px) {
-  .header-top {
-    padding: 6px 10px;
-    height: 64px;
-  }
-
-  .header-logo {
-    height: 50px;
-  }
-
-  .studio-name {
-    font-size: 20px;
-  }
-
-  .studio-sub {
-    font-size: 10px;
-  }
-
-  .studio-ornament {
-    height: 16px;
-    margin-top: 0.05rem;
-  }
-
-  .studio-title-wrap {
-    gap: 0.2rem;
-    margin-top: 0.1rem;
-  }
-
-    .vip-icon {
-    height: 32px;
-  }
-
-  .vip-label {
-    font-size: 0.7rem;
-  }
-
-  .header-nav {
-    margin-top: 64px;
-    height: 50px;
-  }
-}
 
 /* VIP Icon - always aligned right */
 .vip-icon-container {
@@ -209,3 +168,45 @@
   filter: brightness(1.8);
 }
 
+/* phone */
+@media (max-width: 768px) {
+  .header-top {
+    padding: 6px 10px;
+    height: 64px;
+  }
+
+  .header-logo {
+    height: 50px;
+  }
+
+  .studio-name {
+    font-size: 20px;
+  }
+
+  .studio-sub {
+    font-size: 10px;
+  }
+
+  .studio-ornament {
+    height: 16px;
+    margin-top: 0.05rem;
+  }
+
+  .studio-title-wrap {
+    gap: 0.2rem;
+    margin-top: 0.1rem;
+  }
+
+    .vip-icon {
+    height: 32px;
+  }
+
+  .vip-label {
+    font-size: 0.7rem;
+  }
+
+  .header-nav {
+    margin-top: 64px;
+    height: 50px;
+  }
+}
