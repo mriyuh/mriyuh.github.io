@@ -35,11 +35,6 @@
   gap: 10px;
 }
 
-.header-icon,
-.header-logo {
-  cursor: pointer;
-}
-
 /* ===== HEADER Studio Name ===== */
 .header-title-link {
   text-decoration: none;
@@ -124,6 +119,30 @@
   }
 }
 
+/* VIP Icon */
+.vip-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.vip-icon {
+  height: 40px;
+  width: auto;
+}
+
+.vip-label {
+  font-size: 0.75rem;
+  color: #333;
+  margin-top: 2px;
+}
+
+.vip-icon-container:hover {
+  filter: brightness(1.6);
+}
+
 
 /* === Menu Bar === */
 .header-nav {
@@ -132,9 +151,10 @@
   align-items: flex-start; 
   gap: 2.2rem; 
   height: 70px;
-  background-color: #E2DFD9;
+  background-color: #fffcd4;
   border-bottom: 1px solid #ccc;
-  margin-top: 150px;
+  margin-top: 100px;
+  padding-top:10px;
 }
 
 /* === Ornament Positioning === */
