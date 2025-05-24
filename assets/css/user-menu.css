@@ -16,6 +16,22 @@
   transform: translateX(0);
 }
 
+.user-menu-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.user-menu-close:hover {
+  color: #000;
+}
+
 .user-login-btn {
   display: block;
   width: 100%;
