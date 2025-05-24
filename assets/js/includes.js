@@ -1,13 +1,10 @@
-// === Load Header and Footer ===
+// === Load Includes Dynamically ===
 function loadInclude(id, file) {
   fetch(file)
     .then(res => res.text())
     .then(html => {
       document.getElementById(id).innerHTML = html;
-
-      if (id === "header-placeholder") {
-        highlightActiveNav();
-      }
+      if (id === "header-placeholder") highlightActiveNav();
     })
     .catch(err => console.error(`Error loading ${file}:`, err));
 }
@@ -18,7 +15,6 @@ function highlightActiveNav() {
   document.querySelectorAll(".nav-link-with-ornament").forEach(wrapper => {
     const anchor = wrapper.querySelector("a");
     const href = anchor.getAttribute("href");
-
     if (
       path === href ||
       (href.includes("/marketplace") && path.startsWith("/marketplace/"))
@@ -28,12 +24,29 @@ function highlightActiveNav() {
   });
 }
 
+// === Init Everything Once DOM is Ready ===
 document.addEventListener("DOMContentLoaded", () => {
-  // Load header and footer
+  const body = document.body;
+
+  // Inject and load header
+  const headerDiv = document.createElement("div");
+  headerDiv.id = "header-placeholder";
+  body.insertBefore(headerDiv, body.firstChild);
   loadInclude("header-placeholder", "/header.html");
+
+  // Inject and load user menu
+  const userMenuDiv = document.createElement("div");
+  userMenuDiv.id = "user-menu-placeholder";
+  headerDiv.insertAdjacentElement("afterend", userMenuDiv);
+  loadInclude("user-menu-placeholder", "/user/user-menu.html");
+
+  // Inject and load footer
+  const footerDiv = document.createElement("div");
+  footerDiv.id = "footer-placeholder";
+  body.appendChild(footerDiv);
   loadInclude("footer-placeholder", "/footer.html");
 
-  // === Drop Counter (if present) ===
+  // === Drop Counter Logic ===
   const fill = document.getElementById("drop-fill");
   const count = document.getElementById("drop-count");
   let remaining = 1000;
@@ -54,13 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 15000);
   }
 
-  // === Latest YouTube Video (if present) ===
+  // === Latest YouTube Video Info ===
   const container = document.getElementById("latest-video-link");
   if (container) {
     const videoUrl = container.dataset.url;
     const match = videoUrl.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
     const videoId = match ? match[1] : null;
-  
+
     if (videoId) {
       fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`)
         .then(res => res.json())
@@ -75,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // === Slideshow ===
+  // === Slideshow Logic ===
   let currentSlide = 0;
   const slides = document.querySelectorAll(".gallery-slide");
 
@@ -86,5 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[currentSlide].classList.add("active");
   }
 
-  window.changeSlide = changeSlide; // expose to global for button onclick
+  window.changeSlide = changeSlide;
 });
+
+// === User Menu Toggle ===
+function toggleUserMenu() {
+  const menu = document.querySelector(".user-menu");
+  if (menu) {
+    menu.classList.toggle("open");
+  }
+}
