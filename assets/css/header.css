@@ -114,18 +114,24 @@
     margin-top: 0.1rem;
   }
 
-  .header-icon {
-    height: 20px;
+    .vip-icon {
+    height: 32px;
+  }
+
+  .vip-label {
+    font-size: 0.7rem;
   }
 }
 
-/* VIP Icon */
+/* VIP Icon - always aligned right */
 .vip-icon-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: filter 0.2s ease;
+  margin-left: auto; /* pushes it to far right in flex row */
 }
 
 .vip-icon {
