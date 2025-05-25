@@ -137,7 +137,7 @@
 
 .nav-ornament {
   width: auto;
-  height: 5px;
+  height: 10px;
   opacity: 0.85;
   display: none;
   transition: filter 0.2s ease;
